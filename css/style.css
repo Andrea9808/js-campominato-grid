@@ -46,9 +46,35 @@ main{
     cursor: pointer;
 }
 
+.square2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: transparent;
+    width: calc(100%/9);
+    height: 50px;
+    cursor: pointer;
+}
+
+.square3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: transparent;
+    width: calc(100%/7);
+    height: 50px;
+    cursor: pointer;
+}
+
+#grid > .square.difficolta2 {
+    width: calc(100%/9);
+}
+
 
 .clicked{
-    background-color: rgb(148, 148, 211);
+    background-color: rgb(110, 110, 220);
 }
 
 
