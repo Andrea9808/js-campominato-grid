@@ -20,11 +20,16 @@ buttonPlay.addEventListener("click",
 
                     newElement.classList.add("clicked");
 
+                    //click del numero
+                    console.log(i);
+
                 }
             )
         }
 
     }
+
+   
 )
 
 
