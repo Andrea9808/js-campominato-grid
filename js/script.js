@@ -15,71 +15,47 @@ buttonPlay.addEventListener("click",
         //rimuovo gli elementi dopo aver cliccato nuovamente il bottone
         gridElement.innerHTML = "";
 
-        const difficulty = selectDifficolta.value; // Ottengo la difficoltà selezionata
+        // ottengo la difficoltà selezionata
+        const difficolta = selectDifficolta.value; 
 
+        //memorizzo una variabile per gli elemeti
+        let elements;
+
+        if (difficolta === "Difficoltà1") {
+            elements = 100;
+        } 
         
-        //creo una condizione, ad ogni condizione una difficoltà diversa
-        if (difficulty === "Difficoltà1") {
-            for (let i = 1; i <= 100; i++) {
-
-                const newElement = createMyElement("div", "square", i);
-                gridElement.append(newElement);
-    
-                newElement.addEventListener("click",
-    
-                    function () {
-    
-                        newElement.classList.add("clicked");
-    
-                        //click del numero
-                        console.log(i);
-    
-                    }
-                )
-            }
-            
-        } else if (difficulty === "Difficoltà2") {
-            for (let i = 1; i <= 81; i++) {
-
-                const newElement = createMyElement("div", "square2", i);
-                gridElement.append(newElement);
-    
-                newElement.addEventListener("click",
-    
-                    function () {
-    
-                        newElement.classList.add("clicked");
-    
-                        //click del numero
-                        console.log(i);
-    
-                    }
-                )
-            }
-
-        } else if (difficulty === "Difficoltà3") {
-            for (let i = 1; i <= 49; i++) {
-
-                const newElement = createMyElement("div", "square3", i);
-                gridElement.append(newElement);
-    
-                newElement.addEventListener("click",
-    
-                    function () {
-    
-                        newElement.classList.add("clicked");
-    
-                        //click del numero
-                        console.log(i);
-    
-                    }
-                )
-            }
-        } else {
-            i = 100; 
+        else if (difficolta === "Difficoltà2") {
+            elements = 81;
+            gridElement.classList.add("difficolta2");
+        } 
+        
+       else if (difficolta === "Difficoltà3") {
+            elements = 49;
+            gridElement.classList.add("difficolta3");
+        } 
+        
+        else {
+            elements = 100; 
         }
 
-        
+        for (let i = 1; i <= elements; i++) {
+
+            const newElement = createMyElement("div", "square", i);
+            gridElement.append(newElement);
+
+            newElement.addEventListener("click",
+
+                function () {
+
+                    newElement.classList.add("clicked");
+
+                    //click del numero
+                    console.log(i);
+
+                }
+            )
+        }
 
     }
 
