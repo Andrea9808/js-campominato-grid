@@ -21,23 +21,23 @@ buttonPlay.addEventListener("click",
         //memorizzo una variabile per gli elemeti
         let elements;
 
-        if (difficolta === "Difficoltà1") {
-            elements = 100;
-        } 
-        
-        else if (difficolta === "Difficoltà2") {
+
+        //creo una condizione per ogni difficoltà
+        if (difficolta === "Difficoltà2") {
             elements = 81;
             gridElement.classList.add("difficolta2");
         } 
         
-       else if (difficolta === "Difficoltà3") {
+        else if (difficolta === "Difficoltà3") {
             elements = 49;
             gridElement.classList.add("difficolta3");
         } 
         
-        else {
-            elements = 100; 
-        }
+       else if (difficolta === "Difficoltà1") {
+            elements = 100;
+            gridElement.classList.add("difficolta1");
+        } 
+        
 
         for (let i = 1; i <= elements; i++) {
 
@@ -61,7 +61,6 @@ buttonPlay.addEventListener("click",
 
    
 )
-
 
 
 //funzione per riutilizzo
